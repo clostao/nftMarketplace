@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+.appComponent {
+  a {
+    text-decoration: white;
+    color: inherit;
+  }
+  .header-wrapper {
+    color: #ffffff;
+    a:hover {
+      color: #ffffffAA;
+    }
+  }
+  .header {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+  }
+  .board {
+    margin-top: 1vh;
+    height: fit-content;
+    width: 80vw;
+    position: relative;
+    .wallet-info {
+      position: absolute;
+      font-size: small;
+      left: -20%;
+      width: 20%;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .board-header {
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 20vh;
+      font-size: xx-large;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      color: white;
+      background-color: #000000dd;
+    }
+    .board-load-spinner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: xx-large;
+      width: 100%;
+      height: 50vh;
+    }
+    .board-content {
+      margin-top: 4vh;
+      margin-bottom: 4vh;
+      .header {
+        border: 1px solid #000000dd !important;
+        border-radius: 10px;
+      }
+      .product {
+        margin-top: 1vh;
+        text-align: center;
+        padding: 1%;
+        border: 1px solid #000000dd !important;
+        border-radius: 10px;
+        position: relative;
+        .button {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 80%;
+          right: -7.5vw;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 5vw;
+        }
+        .button.sold {
+          background-color: crimson !important;
+        }
+      }
+    }
+  }
+}
