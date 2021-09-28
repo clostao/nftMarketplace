@@ -7,6 +7,11 @@
           "internalType": "string",
           "name": "_name",
           "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "_contract",
+          "type": "address"
         }
       ],
       "stateMutability": "nonpayable",
@@ -31,38 +36,28 @@
         {
           "components": [
             {
-              "internalType": "string",
-              "name": "name",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "description",
-              "type": "string"
-            },
-            {
-              "internalType": "bool",
-              "name": "selling",
-              "type": "bool"
-            },
-            {
               "internalType": "uint256",
-              "name": "productId",
+              "name": "tokenId",
               "type": "uint256"
             },
             {
               "internalType": "address",
-              "name": "seller",
+              "name": "owner",
               "type": "address"
             },
             {
-              "internalType": "address",
-              "name": "soldTo",
-              "type": "address"
+              "internalType": "bool",
+              "name": "sold",
+              "type": "bool"
             },
             {
               "internalType": "uint256",
               "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "productId",
               "type": "uint256"
             }
           ],
@@ -78,14 +73,9 @@
     {
       "inputs": [
         {
-          "internalType": "string",
-          "name": "_name",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_description",
-          "type": "string"
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
         },
         {
           "internalType": "uint256",
@@ -105,38 +95,28 @@
         {
           "components": [
             {
-              "internalType": "string",
-              "name": "name",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "description",
-              "type": "string"
-            },
-            {
-              "internalType": "bool",
-              "name": "selling",
-              "type": "bool"
-            },
-            {
               "internalType": "uint256",
-              "name": "productId",
+              "name": "tokenId",
               "type": "uint256"
             },
             {
               "internalType": "address",
-              "name": "seller",
+              "name": "owner",
               "type": "address"
             },
             {
-              "internalType": "address",
-              "name": "soldTo",
-              "type": "address"
+              "internalType": "bool",
+              "name": "sold",
+              "type": "bool"
             },
             {
               "internalType": "uint256",
               "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "productId",
               "type": "uint256"
             }
           ],
@@ -162,38 +142,28 @@
         {
           "components": [
             {
-              "internalType": "string",
-              "name": "name",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "description",
-              "type": "string"
-            },
-            {
-              "internalType": "bool",
-              "name": "selling",
-              "type": "bool"
-            },
-            {
               "internalType": "uint256",
-              "name": "productId",
+              "name": "tokenId",
               "type": "uint256"
             },
             {
               "internalType": "address",
-              "name": "seller",
+              "name": "owner",
               "type": "address"
             },
             {
-              "internalType": "address",
-              "name": "soldTo",
-              "type": "address"
+              "internalType": "bool",
+              "name": "sold",
+              "type": "bool"
             },
             {
               "internalType": "uint256",
               "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "productId",
               "type": "uint256"
             }
           ],
@@ -219,38 +189,28 @@
         {
           "components": [
             {
-              "internalType": "string",
-              "name": "name",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "description",
-              "type": "string"
-            },
-            {
-              "internalType": "bool",
-              "name": "selling",
-              "type": "bool"
-            },
-            {
               "internalType": "uint256",
-              "name": "productId",
+              "name": "tokenId",
               "type": "uint256"
             },
             {
               "internalType": "address",
-              "name": "seller",
+              "name": "owner",
               "type": "address"
             },
             {
-              "internalType": "address",
-              "name": "soldTo",
-              "type": "address"
+              "internalType": "bool",
+              "name": "sold",
+              "type": "bool"
             },
             {
               "internalType": "uint256",
               "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "productId",
               "type": "uint256"
             }
           ],
@@ -19151,8 +19111,8 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xba4Ca13Fd97D0E9611558C8Ac1834D9b8674De64",
-      "transactionHash": "0x3c02687330bb3b270ed8c31a89275a46b61cf6b4150e0070b46e9e14f11bb7ab"
+      "address": "0x3B89A79f851e6EA7f938cB4553b3E5245e773Fcf",
+      "transactionHash": "0xfc67093deead4fbd265415489d8a38faf8b37c242dafcfefbcf39547f2b2f2aa"
     },
     "5778": {
       "events": {},

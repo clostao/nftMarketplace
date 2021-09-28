@@ -2,14 +2,17 @@ import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Spinner, Col, Navbar, Container, Row, Button, Modal, Form} from "react-bootstrap";
 
-import {useEffect, useState} from "react";
+import {useEffect, useState } from "react";
 import ProductRow from "./components/ProductRow";
 
 import Minter from './components/Minter';
+import Wallet from './components/Wallet'
 
 import { Link, Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
-import contract from './marketplace'
+import contracts from './services/index';
+
+let contract = contracts.marketPlace;
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -65,6 +68,9 @@ function App() {
                     </Navbar.Brand>
                     <Link to="/minter/">
                         Mint your own NFTs
+                    </Link>
+                    <Link to="/wallet/">
+                        Your NFTs
                     </Link>
                 </Container>
             </Navbar>
@@ -123,7 +129,10 @@ function App() {
                                     <Col className="product-name col-1">
                                         Name
                                     </Col>
-                                    <Col className="product-description col-3">
+                                    <Col className="product-description col-1">
+                                        Image
+                                    </Col>
+                                    <Col className="product-description col-2">
                                         Description
                                     </Col>
                                     <Col product-name="product-seller col-6">
@@ -149,9 +158,10 @@ function App() {
                     </Container>
                 </Route>
                 <Route path="/minter" exact>
-                    <Minter>
-
-                    </Minter>
+                    <Minter/>
+                </Route>
+                <Route path="/wallet" exact>
+                    <Wallet/>
                 </Route>
             </Switch>
         </div>

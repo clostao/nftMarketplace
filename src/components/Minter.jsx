@@ -1,15 +1,14 @@
 import './Minter.scss';
 
-import {ProgressBar, Col, Row, Button, Form, Alert } from "react-bootstrap";
+import { ProgressBar, Col, Row, Button, Form, Alert } from "react-bootstrap";
 
 import axios from "axios";
 
 import { useState } from "react";
 
-import MinterSC  from '../services/Minter';
+import contracts  from '../services/index';
 
-let contract = new MinterSC();
-contract.init();
+let contract = contracts.minter;
 
 function Minter() {
     const [name, setName] = useState("");
@@ -49,6 +48,10 @@ function Minter() {
                             return setTimeout(() => setAlert({type: null, msg: ""}),10000);
                         }
                         console.log(`The minted token id is: ${mintedTokenId}`);
+                        await contract.getTokensInfo().then(e => console.log(e)).catch(err => console.error(err));
+                        await onUpload(1, file, {description: description, name: name}).then(_ => null).catch(e => e);
+                        await onUpload(2, file, {description: description, name: name}).then(_ => null).catch(e => e);
+                        await onUpload(3, file, {description: description, name: name}).then(_ => null).catch(e => e);
                         let response = await onUpload(mintedTokenId, file, {description: description, name: name}).then(_ => null).catch(e => e);
                         console.log(response)
                         if (response !== null) {

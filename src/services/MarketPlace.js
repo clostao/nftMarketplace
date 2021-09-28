@@ -54,7 +54,10 @@ class MarketPlace {
         return new Promise((res, rej) => {
             this.contract = TruffleContract(MarketPlace.contractArtifact);
             this.contract.setProvider(this.provider);
-            this.contract.deployed().then(async instance => instance.getProductsInSell()).then((products) => {
+            this.contract.deployed().then(async instance => {
+                this._address = instance.contract._address;
+                return instance.getProductsInSell();
+            }).then((products) => {
                 res([products])
             }).catch(e => console.error(e));
         })
@@ -68,9 +71,9 @@ class MarketPlace {
         });
     }
 
-    addProductToSell(desc, name, price) {
+    addProductToSell(tokenId, price) {
         return this.contract.deployed().then(async instance => {
-            let promise = await instance.addProductToSell(name, desc, price, { from: this.account });
+            let promise = await instance.addProductToSell(tokenId, price, { from: this.account });
             this._publishAccountChanges();
             return promise;
         });
